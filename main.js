@@ -201,6 +201,7 @@ function  btnIniciarJuego(palabraGuardada, pistaGuardada) {
   palabraEscondidaEl.innerHTML = palabraEscondidaConGuiones;
   pistaEl.innerHTML = pista;
   contadorErrores = 0;
+  dibujoEl.setAttribute("src", `imagenes/estados/es${contadorErrores}.png`);
 
   console.log({ palabraRandom, pista });
 
