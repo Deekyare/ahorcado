@@ -275,6 +275,7 @@ function teclaIn(element) {
       contenedorResultadoPositivo.classList.remove("escondido");
       contenedorJuego.classList.add("escondido");
       contadorErrores = 0;
+      dibujoEl.setAttribute("src", `imagenes/estados/es${contadorErrores}.png`);
       
     }
   }
@@ -282,4 +283,5 @@ function teclaIn(element) {
 function btnVolverAjugar() {
   mostrarMenu();
   contadorErrores = 0;
+  dibujoEl.setAttribute("src", `imagenes/estados/es${contadorErrores}.png`);
 }
