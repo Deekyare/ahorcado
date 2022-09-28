@@ -1,0 +1,253 @@
+body {
+  background-image: url(imagenes/hoja.jpeg);
+  background-size: auto;
+  font-family: 'Combo', cursive;
+  font-size: 10px;
+
+  ;
+}
+
+.logo {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  
+}
+.logo img {
+  width: 70px;
+  padding: 0, 5px;
+}
+#titulo {
+  padding: 15px;
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+main {
+  width: 100%;
+  text-align: center;
+}
+.dibujo {
+  display: flex;
+  margin: 30px;
+  width: auto;
+}
+.leyenda {
+  width: 205px;
+  height: 18px;
+
+  font-family: "Inter";
+  font-size: 12px;
+
+  color: #495057;
+  opacity: 10;
+  margin-left: 347px;
+}
+
+.escondido {
+  display: none !important;
+}
+
+.deshabilitado {
+  background-color: gray !important;
+  pointer-events: none;
+}
+
+.iniciar-juego {
+  margin-top: 15px;
+  font-family: 'Roboto Mono', monospace;
+
+  vertical-align: center;
+  width: 370px;
+  height: 60px;
+  display: block;
+  background: greenyellow;
+  border-radius: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: #050000;
+  margin-block: 100px;
+  margin-inline: auto;
+}
+.iniciar-juego:hover {
+  background-color: orange;
+  transition: background-color 0.8s;
+}
+.palabra-escondida {
+  letter-spacing: 20px;
+
+}
+
+.agregarpalabra {
+  margin-top: 15px;
+  font-family: 'Roboto Mono', monospace;
+
+  vertical-align: center;
+  width: 370px;
+  height: 60px;
+  background: greenyellow;
+  border-radius: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: #050000;
+  margin-block: 100px;
+  margin-inline: auto;
+}
+.agregarpalabra:hover {
+  background-color: orange;
+  transition: background-color 0.8s;
+}
+.teclado {
+  width: auto;
+  background-color: #e6ffb8;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 15px;
+  margin-top: -400px;
+  margin-right: -650px;
+  border: solid green;
+  padding: 10px;
+  background-color: pink;
+}
+.btonTeclado{
+  padding: 10px;
+  font-family: 'Roboto Mono', monospace;
+  display: inline-block;
+  background: greenyellow;
+  text-align: center;
+  color: #050000;
+  font-size: 23px;
+  border-radius: 5px;
+}
+
+.footer{
+  width: 50px;
+  display: inline;
+  margin-top: 91px;
+
+}
+.input-texto{
+  border-radius: 10px;
+
+  width: auto;
+  background-color: #e6ffb8;
+ 
+  border: solid green;
+ 
+  background-color: ffe8ec;
+}
+.input-texto-pista{
+  border-radius: 10px;
+
+  width: auto;
+  background-color: #e6ffb8;
+ 
+  border: solid green;
+ 
+  background-color: ffe8ec;
+}
+
+.guardarPalabra{
+
+  
+  font-family: 'Roboto Mono', monospace;
+
+  vertical-align: center;
+  background: greenyellow;
+  border-radius: 20px;
+  font-size: 15px;
+  text-align: center;
+  color: #050000;
+ 
+}
+.guardarPalabra:hover {
+  background-color: orange;
+  transition: background-color 0.8s;
+}
+.parpadea {
+  
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo{  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {  
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+.cancelar{
+
+
+  font-family: 'Roboto Mono', monospace;
+
+  background: greenyellow;
+  border-radius: 20px;
+  font-size: 15px;
+  text-align: center;
+  color: #050000;
+  margin: 10px;
+}
+.cancelar:hover {
+  background-color: orange;
+  transition: background-color 0.8s;
+}
+
+.contenedor-input{
+  margin-top: 50px;
+}
+
+.la-palabra-era{
+  font-size: 35px;
+  background-color: lightyellow;
+  border-radius: 5px;
+  border: solid 10px rgb(28, 106, 22);
+  max-width: fit-content;
+  margin: auto;
+}
+
+.pista{
+  font-size: 15px;
+  color: rgb(192, 42, 182);
+  padding-bottom: 20px;
+  font-family: 'Roboto Mono', monospace;
+
+}
+.palabra-escondida{
+
+  font-size: 35px;
+  color: rgb(6, 80, 6);
+ 
+  
+}
+.ganaste-nene{
+  width: 200px;
+  padding: 30px;
+}
+
+.ganaste{
+  font-size: 35px;
+  background-color: lightyellow;
+  border-radius: 5px;
+    border: solid 10px rgb(28, 106, 22);
+    max-width: fit-content;
+    margin: auto;
+}

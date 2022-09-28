@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ahorcado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="ahorcado.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Combo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="iniciarPrograma()">
+    <header>
+      <div class="logo">
+        <a href="ahorcado.html"><img src="imagenes/logo.png" alt="logo" /></a>
+        <p id="titulo">Juego del ahorcado</p>
+      </div>
+    </header>
+    <main>
+      <section class="contenedor-menu-principal">
+        <!-- botones iniciales -->
+        <div class="botonesIniciales">
+          <!-- Boton iniciar juego -->
+          <button class="iniciar-juego" onclick="btnIniciarJuego()">
+            Iniciar Juego
+          </button>
+          <!-- Boton agregar palabra -->
+          <button class="agregarpalabra" onclick="btnAgregarPalabra()">
+            Agregar palabra
+          </button>
+        </div>
+      </section>
+
+      <section class="contenedor-agregar-palabra">
+        <div class="contenedor-input">
+          <div class="leyenda">
+            <img src="imagenes/exclamation.png" />
+            <span>Letras minúsculas y sin acentos</span>
+          </div>
+
+          <textarea
+            class="input-texto"
+            cols="40"
+            rows="6"
+            placeholder="Ingrese aquí la palabra a agregar"
+          ></textarea>
+
+          <textarea
+            class="input-texto-pista"
+            cols="40"
+            rows="6"
+            placeholder="Ingrese aquí la pista"
+          ></textarea>
+
+          <div class="botones2">
+            <button class="guardarPalabra" onclick="btnguardarPalabra()">
+              Guardar y empezar
+            </button>
+            <button class="cancelar" onclick="btnCancelar()">Cancelar</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="contenedor-juego">
+        <!-- lugar donde va la horca -->
+        <div class="contenedor-dibujos">
+          <img class="dibujo" src="imagenes/estados/es0.png" />
+        </div>
+
+        <!-- letras correctas e incorrectas -->
+        <div class="teclado">
+          <table>
+            <tr>
+              <td>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="a"
+                  onclick="teclaIn(this)"
+                >
+                  A
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="b"
+                  onclick="teclaIn(this)"
+                >
+                  B
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="c"
+                  onclick="teclaIn(this)"
+                >
+                  C
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="d"
+                  onclick="teclaIn(this)"
+                >
+                  D
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="e"
+                  onclick="teclaIn(this)"
+                >
+                  E
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="f"
+                  onclick="teclaIn(this)"
+                >
+                  F
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="g"
+                  onclick="teclaIn(this)"
+                >
+                  G
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="h"
+                  onclick="teclaIn(this)"
+                >
+                  H
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="i"
+                  onclick="teclaIn(this)"
+                >
+                  I
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="j"
+                  onclick="teclaIn(this)"
+                >
+                  J
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="k"
+                  onclick="teclaIn(this)"
+                >
+                  K
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="l"
+                  onclick="teclaIn(this)"
+                >
+                  L
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="m"
+                  onclick="teclaIn(this)"
+                >
+                  M
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="n"
+                  onclick="teclaIn(this)"
+                >
+                  N
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="ñ"
+                  onclick="teclaIn(this)"
+                >
+                  Ñ
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="o"
+                  onclick="teclaIn(this)"
+                >
+                  O
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="p"
+                  onclick="teclaIn(this)"
+                >
+                  P
+                </button>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="q"
+                  onclick="teclaIn(this)"
+                >
+                  Q
+                </button>
+
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="r"
+                  onclick="teclaIn(this)"
+                >
+                  R
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="s"
+                  onclick="teclaIn(this)"
+                >
+                  S
+                </button>
+
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="t"
+                  onclick="teclaIn(this)"
+                >
+                  T
+                </button>
+
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="u"
+                  onclick="teclaIn(this)"
+                >
+                  U
+                </button>
+
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="v"
+                  onclick="teclaIn(this)"
+                >
+                  V
+                </button>
+
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="w"
+                  onclick="teclaIn(this)"
+                >
+                  W
+                </button>
+
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="x"
+                  onclick="teclaIn(this)"
+                >
+                  X
+                </button>
+
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="y"
+                  onclick="teclaIn(this)"
+                >
+                  Y
+                </button>
+
+                <button
+                  class="btonTeclado"
+                  type="button"
+                  data-tecla="z"
+                  onclick="teclaIn(this)"
+                >
+                  Z
+                </button>
+              </td>
+            </tr>
+          </table>
+        <button class="cancelar" onclick="btnVolverAjugar()">Volver al menú</button></div>
+         <div class="pista"></div>
+        
+        <div class="palabra-escondida"></div>
+        
+
+      
+      </section>
+
+      <section class="contenedor-resultado-negativo escondido">
+        <p class="la-palabra-era parpadea "> La palabra era: <span class="respuesta parpadea"></span></span></p>
+         <img class="perdiste" src="imagenes/estados/perdiste.png" alt="gameover" />
+         <button class="iniciar-juego" onclick="btnVolverAjugar()">Volver a jugar</button>
+
+        </section> 
+
+         <section class="contenedor-resultado-positivo escondido">
+          <p class="ganaste parpadea ">Ganaste <span class="respuesta parpadea"></span></span></p>
+         <img class="ganaste-nene " src="imagenes/estados/ganaste.png" alt="ganaste" />
+         <button class="iniciar-juego" onclick="btnVolverAjugar()">Volver a jugar</button>
+        </section>
+         
+         
+         
+      
+    </main>
+    <footer>
+      <div>
+        <a href="https://www.linkedin.com/in/silvia-giardini-3ab532175/">
+          <img class="footer" src="imagenes/in.png" alt="in"
+        /></a>
+        <a href="https://github.com/Deekyare">
+          <img class="footer" src="imagenes/git.png" alt="git"
+        /></a>
+        <a href="https://www.instagram.com/sil_deekyare/">
+          <img class="footer" src="imagenes/ig.png" alt="instagram"
+        /></a>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
