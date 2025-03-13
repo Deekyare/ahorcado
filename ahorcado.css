@@ -1,46 +1,28 @@
 body {
   background-image: url(imagenes/hoja.jpeg);
-  background-size: auto;
+  background-size: cover;
   font-family: 'Combo', cursive;
-  font-size: 10px;
-
-  ;
+  font-size: 1rem;
 }
 
-.logo {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  
-}
 .logo img {
-  width: 70px;
-  padding: 0, 5px;
+  max-width: 50px;
 }
+
 #titulo {
-  padding: 15px;
-  letter-spacing: 3px;
-  font-size: 20px;
+  padding: 0 10px;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
 }
-main {
-  width: 100%;
-  text-align: center;
-}
+
 .dibujo {
-  display: flex;
-  margin: 30px;
-  width: auto;
+  max-width: 200px;
 }
+
 .leyenda {
-  width: 205px;
-  height: 18px;
-
   font-family: "Inter";
-  font-size: 12px;
-
+  font-size: 0.9rem;
   color: #495057;
-  opacity: 10;
-  margin-left: 347px;
 }
 
 .escondido {
@@ -52,202 +34,165 @@ main {
   pointer-events: none;
 }
 
-.iniciar-juego {
-  margin-top: 15px;
-  font-family: 'Roboto Mono', monospace;
-
-  vertical-align: center;
-  width: 370px;
-  height: 60px;
-  display: block;
-  background: greenyellow;
-  border-radius: 20px;
-  font-size: 30px;
-  text-align: center;
-  color: #050000;
-  margin-block: 100px;
-  margin-inline: auto;
-}
-.iniciar-juego:hover {
-  background-color: orange;
-  transition: background-color 0.8s;
-}
-.palabra-escondida {
-  letter-spacing: 20px;
-
-}
-
+.iniciar-juego,
 .agregarpalabra {
-  margin-top: 15px;
-  font-family: 'Roboto Mono', monospace;
-
-  vertical-align: center;
-  width: 370px;
-  height: 60px;
   background: greenyellow;
   border-radius: 20px;
-  font-size: 30px;
-  text-align: center;
+  font-size: 1.5rem;
   color: #050000;
-  margin-block: 100px;
-  margin-inline: auto;
+  transition: background-color 0.8s;
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.iniciar-juego:hover,
 .agregarpalabra:hover {
   background-color: orange;
-  transition: background-color 0.8s;
 }
+
 .teclado {
-  width: auto;
-  background-color: #e6ffb8;
-  display: inline-block;
-  vertical-align: top;
-  border-radius: 15px;
-  margin-top: -400px;
-  margin-right: -650px;
-  border: solid green;
-  padding: 10px;
   background-color: pink;
+  border-radius: 15px;
+  border: solid green;
+  max-width: 350px;
 }
-.btonTeclado{
-  padding: 10px;
-  font-family: 'Roboto Mono', monospace;
-  display: inline-block;
+
+.btonTeclado {
   background: greenyellow;
-  text-align: center;
   color: #050000;
-  font-size: 23px;
-  border-radius: 5px;
-}
-
-.footer{
-  width: 50px;
-  display: inline;
-  margin-top: 91px;
-
-}
-.input-texto{
-  border-radius: 10px;
-
-  width: auto;
-  background-color: #e6ffb8;
- 
-  border: solid green;
- 
-  background-color: ffe8ec;
-}
-.input-texto-pista{
-  border-radius: 10px;
-
-  width: auto;
-  background-color: #e6ffb8;
- 
-  border: solid green;
- 
-  background-color: ffe8ec;
-}
-
-.guardarPalabra{
-
-  
   font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  padding: 4px;
+}
 
-  vertical-align: center;
+.footer {
+  max-width: 50px;
+}
+
+.input-texto,
+.input-texto-pista {
+  border-radius: 10px;
+  background-color: #ffe8ec;
+  border: solid green;
+  max-width: 370px;
+}
+
+.guardarPalabra,
+.cancelar {
+  font-family: 'Roboto Mono', monospace;
   background: greenyellow;
   border-radius: 20px;
-  font-size: 15px;
-  text-align: center;
+  font-size: 1rem;
   color: #050000;
- 
-}
-.guardarPalabra:hover {
-  background-color: orange;
   transition: background-color 0.8s;
+  padding: 8px 16px;
 }
+
+.guardarPalabra:hover,
+.cancelar:hover {
+  background-color: orange;
+}
+
+.palabra-escondida {
+  letter-spacing: 8px;
+  font-size: 1.25rem;
+  color: rgb(6, 80, 6);
+  word-wrap: break-word;
+}
+
+.pista {
+  font-size: 0.85rem;
+  color: rgb(192, 42, 182);
+  font-family: 'Roboto Mono', monospace;
+}
+
+.la-palabra-era,
+.ganaste {
+  font-size: 1.25rem;
+  background-color: lightyellow;
+  border-radius: 5px;
+  border: solid 10px rgb(28, 106, 22);
+  padding: 8px;
+}
+
+.ganaste-nene {
+  max-width: 150px;
+  padding: 10px;
+}
+
+.perdiste {
+  max-width: 350px; /* Tamaño máximo para la imagen de "perdiste" */
+  padding: 10px; /* Igual que "ganaste-nene" para consistencia */
+}
+
+.resultado-contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+  max-height: 80vh; /* Limita la altura al 80% del viewport */
+}
+
 .parpadea {
-  
-  animation-name: parpadeo;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-
-  -webkit-animation-name:parpadeo;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-}
-
-@-moz-keyframes parpadeo{  
-  0% { opacity: 1.0; }
-  50% { opacity: 0.0; }
-  100% { opacity: 1.0; }
-}
-
-@-webkit-keyframes parpadeo {  
-  0% { opacity: 1.0; }
-  50% { opacity: 0.0; }
-   100% { opacity: 1.0; }
+  animation: parpadeo 1s linear infinite;
 }
 
 @keyframes parpadeo {  
   0% { opacity: 1.0; }
-   50% { opacity: 0.0; }
+  50% { opacity: 0.0; }
   100% { opacity: 1.0; }
 }
 
-.cancelar{
-
-
-  font-family: 'Roboto Mono', monospace;
-
-  background: greenyellow;
-  border-radius: 20px;
-  font-size: 15px;
-  text-align: center;
-  color: #050000;
-  margin: 10px;
-}
-.cancelar:hover {
-  background-color: orange;
-  transition: background-color 0.8s;
-}
-
-.contenedor-input{
-  margin-top: 50px;
-}
-
-.la-palabra-era{
-  font-size: 35px;
-  background-color: lightyellow;
-  border-radius: 5px;
-  border: solid 10px rgb(28, 106, 22);
-  max-width: fit-content;
-  margin: auto;
-}
-
-.pista{
-  font-size: 15px;
-  color: rgb(192, 42, 182);
-  padding-bottom: 20px;
-  font-family: 'Roboto Mono', monospace;
-
-}
-.palabra-escondida{
-
-  font-size: 35px;
-  color: rgb(6, 80, 6);
- 
+@media (max-width: 768px) {
+  #titulo {
+    font-size: 1rem;
+  }
   
-}
-.ganaste-nene{
-  width: 200px;
-  padding: 30px;
-}
-
-.ganaste{
-  font-size: 35px;
-  background-color: lightyellow;
-  border-radius: 5px;
-    border: solid 10px rgb(28, 106, 22);
-    max-width: fit-content;
-    margin: auto;
+  .logo img {
+    max-width: 40px;
+  }
+  
+  .iniciar-juego,
+  .agregarpalabra {
+    font-size: 1.2rem;
+  }
+  
+  .btonTeclado {
+    font-size: 0.75rem;
+  }
+  
+  .palabra-escondida {
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
+  
+  .dibujo {
+    max-width: 150px;
+  }
+  
+  .teclado {
+    max-width: 300px;
+  }
+  
+  .la-palabra-era,
+  .ganaste {
+    font-size: 1rem;
+  }
+  
+  .ganaste-nene {
+    max-width: 100px;
+    padding: 5px;
+  }
+  
+  .perdiste {
+    max-width: 200px; /* Más pequeño en móviles */
+    padding: 5px;
+  }
+  
+  .resultado-contenido {
+    max-height: 70vh; /* Más pequeño en móviles */
+  }
 }
